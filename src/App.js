@@ -3,6 +3,6 @@ import Count from './components/count'
 
 export default class App extends Component {
     render() {
-        return <Count/>
+        return <Count store={this.props.store}/>
     }
 }
