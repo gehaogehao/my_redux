@@ -8,7 +8,7 @@ export default function(preState=0,action){
             newState = preState + data
             return newState
             
-        case DECREMENT: //加法
+        case DECREMENT: //减法
             newState = preState - data
             return newState
             
