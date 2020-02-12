@@ -57,17 +57,15 @@ export default class Count extends Component {
             // this.props.store.dispatch(createIncrementAction(value*1))
         //},1000)
         //react-redux版本
-        // setTimeout(()=>{
-        //     this.props.increment(value*1)
-        // },1000)
-        //thunk版本
-        this.props.incrementAsync(value*1,2000)
+        setTimeout(()=>{
+            this.props.increment(value*1)
+        },1000)
     }
 
     render() {
         return (
             <div>
-                <h2>计数器:当前数字为{this.props.number} 下面人数为:{this.props.persons.length}</h2>
+                <h2>计数器:当前数字为{this.props.number}</h2>
                 <select ref='number'>
                     <option value="1">1</option>
                     <option value="2">2</option>

@@ -2,11 +2,8 @@
 //引入createStore创建一个store
 import {createStore,applyMiddleware} from 'redux'
 //引入reducer,操作状态
-import reducer from './reducers'
+import countReducer from './count_reducer'
 //引入redux-thunk用于异步编程
 import thunk from 'redux-thunk'
-//引入composeWithDevTools，用于调试redux代码
-import {composeWithDevTools} from 'redux-devtools-extension'
-
 //调用createStore时，必须传入一个reducer   (用于接收reducer返回的新状态newState)
-export default createStore(reducer,composeWithDevTools(applyMiddleware(thunk)))
+export default createStore(countReducer,applyMiddleware(thunk))
